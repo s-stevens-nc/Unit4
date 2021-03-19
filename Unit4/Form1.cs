@@ -26,7 +26,7 @@ namespace Unit4
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Welcome to the sportsday!");
-        }
+        }// this is going to display Welcome to sportday after save button clicked//
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -39,6 +39,11 @@ namespace Unit4
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddTeams_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

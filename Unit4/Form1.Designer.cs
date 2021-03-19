@@ -37,8 +37,7 @@ namespace Unit4
             this.AddTeams = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.AddTeams.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +52,7 @@ namespace Unit4
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 25);
+            this.textBox1.Location = new System.Drawing.Point(174, 178);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(188, 20);
             this.textBox1.TabIndex = 1;
@@ -66,7 +65,7 @@ namespace Unit4
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Individual"});
-            this.checkedListBox1.Location = new System.Drawing.Point(3, 65);
+            this.checkedListBox1.Location = new System.Drawing.Point(2, 218);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(81, 34);
             this.checkedListBox1.TabIndex = 3;
@@ -74,7 +73,7 @@ namespace Unit4
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(175, 115);
+            this.button1.Location = new System.Drawing.Point(174, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 67);
             this.button1.TabIndex = 4;
@@ -88,7 +87,7 @@ namespace Unit4
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
             "One event"});
-            this.checkedListBox2.Location = new System.Drawing.Point(466, 65);
+            this.checkedListBox2.Location = new System.Drawing.Point(465, 218);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(81, 34);
             this.checkedListBox2.TabIndex = 5;
@@ -102,9 +101,11 @@ namespace Unit4
             this.AddTeams.SelectedIndex = 0;
             this.AddTeams.Size = new System.Drawing.Size(941, 527);
             this.AddTeams.TabIndex = 6;
+            this.AddTeams.SelectedIndexChanged += new System.EventHandler(this.AddTeams_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.checkedListBox2);
@@ -114,7 +115,7 @@ namespace Unit4
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(933, 501);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Individual";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -123,10 +124,19 @@ namespace Unit4
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(908, 288);
+            this.tabPage2.Size = new System.Drawing.Size(933, 501);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Add team";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(174, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Individual registration";
             // 
             // Form1
             // 
@@ -155,8 +165,7 @@ namespace Unit4
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.TabControl AddTeams;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
