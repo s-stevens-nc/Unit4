@@ -36,10 +36,17 @@ namespace Unit4
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.AddTeams = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.AddTeams.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
@@ -119,16 +126,6 @@ namespace Unit4
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(933, 501);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add team";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -137,6 +134,78 @@ namespace Unit4
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Individual registration";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.checkBox2);
+            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(933, 501);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Add team";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(273, 283);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(188, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "Are you particpating in one event?";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(273, 246);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(131, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Are you an Individual?";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(329, 339);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(167, 44);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Add Team";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(273, 200);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(275, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(334, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Team Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label3.Location = new System.Drawing.Point(317, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 46);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Add Team";
             // 
             // Form1
             // 
@@ -151,6 +220,8 @@ namespace Unit4
             this.AddTeams.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -166,6 +237,12 @@ namespace Unit4
         private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.TabControl AddTeams;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
