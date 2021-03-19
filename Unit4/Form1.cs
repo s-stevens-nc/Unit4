@@ -25,10 +25,20 @@ namespace Unit4
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            System.Windows.Forms.MessageBox.Show("Welcome to the sportsday!");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // the name gets put in here//
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
