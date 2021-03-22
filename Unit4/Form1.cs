@@ -14,6 +14,9 @@ namespace Unit4
 	{
 		public Form1()
 		{
+            Teams = new List<Team>();
+            Individuals = new List<Team>();
+            Events = new List<Event>();
 			InitializeComponent();
 
 		}
@@ -115,6 +118,20 @@ namespace Unit4
         private void button5_Click(object sender, EventArgs e)
         {
             AddTeams.SelectedIndex = 3;
+        }
+
+        // Method to add team
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string name = textBox2.Text;
+            bool isIndividual = checkBox1.Checked;
+            bool singleEvent = checkBox2.Checked;
+
+            RegisterTeam(name, isIndividual, singleEvent);
+
+            textBox2.Text = "";
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
         }
     }
 }
