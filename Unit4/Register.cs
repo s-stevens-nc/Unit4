@@ -14,6 +14,11 @@ namespace Unit4
     partial class Form1
     {
 
+        // Even though indivusuals and teams are both team structures, we are keeing them in seperate lists
+        List<Team> Individuals;
+        List<Team> Teams;
+        List<Event> Events;
+
         public struct Team
         {
             string Name;
@@ -31,6 +36,5 @@ namespace Unit4
             bool Done;
             List<int> ParticipantsIDs;
         }
-
     }
 }
