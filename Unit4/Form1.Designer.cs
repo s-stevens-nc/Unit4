@@ -36,9 +36,6 @@ namespace Unit4
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.AddTeams = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -65,12 +62,26 @@ namespace Unit4
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddTeams.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -129,6 +140,7 @@ namespace Unit4
             this.AddTeams.Controls.Add(this.tabPage1);
             this.AddTeams.Controls.Add(this.tabPage2);
             this.AddTeams.Controls.Add(this.tabPage3);
+            this.AddTeams.Controls.Add(this.tabPage5);
             this.AddTeams.Location = new System.Drawing.Point(0, 0);
             this.AddTeams.Name = "AddTeams";
             this.AddTeams.SelectedIndex = 0;
@@ -138,43 +150,20 @@ namespace Unit4
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button8);
+            this.tabPage4.Controls.Add(this.button7);
+            this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(933, 501);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Main menu";
+            this.tabPage4.Text = "Main Menu";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(534, 29);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 154);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Leaderboard";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(222, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(387, 132);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Team";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(22, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(263, 128);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Individual";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -429,6 +418,116 @@ namespace Unit4
             this.Column5.HeaderText = "Team 5";
             this.Column5.Name = "Column5";
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(459, 349);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(300, 63);
+            this.button8.TabIndex = 23;
+            this.button8.Text = "View the Individuals";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(459, 265);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(300, 63);
+            this.button7.TabIndex = 22;
+            this.button7.Text = "View the Teams";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(459, 181);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(300, 63);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "View the Events";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(76, 349);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(300, 63);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "View The Leaderboard";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(76, 265);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(300, 63);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Add a team";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(76, 181);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(300, 63);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Add an Individual";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(40, 49);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(847, 55);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Welcome to the sports scoring system!";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(207, 82);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.TabIndex = 16;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.dataGridView2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(933, 501);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Events";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(31, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(328, 46);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Upcoming events";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column6});
+            this.dataGridView2.Location = new System.Drawing.Point(39, 131);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(680, 304);
+            this.dataGridView2.TabIndex = 5;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Event 1";
+            this.Column6.Name = "Column6";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,6 +540,7 @@ namespace Unit4
             this.Load += new System.EventHandler(this.Form1_Load);
             this.AddTeams.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -448,6 +548,9 @@ namespace Unit4
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -487,9 +590,18 @@ namespace Unit4
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 
