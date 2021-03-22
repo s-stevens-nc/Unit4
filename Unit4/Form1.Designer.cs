@@ -35,6 +35,10 @@ namespace Unit4
             this.button1 = new System.Windows.Forms.Button();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.AddTeams = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -61,16 +65,12 @@ namespace Unit4
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.AddTeams.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
@@ -135,6 +135,48 @@ namespace Unit4
             this.AddTeams.Size = new System.Drawing.Size(941, 527);
             this.AddTeams.TabIndex = 6;
             this.AddTeams.SelectedIndexChanged += new System.EventHandler(this.AddTeams_SelectedIndexChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(933, 501);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Main menu";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(410, 244);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(269, 132);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Leaderboard";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(22, 244);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(263, 132);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Team";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(22, 29);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(263, 128);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Individual";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage1
             // 
@@ -357,7 +399,7 @@ namespace Unit4
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(50, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 398);
             this.dataGridView1.TabIndex = 0;
@@ -388,46 +430,6 @@ namespace Unit4
             this.Column5.HeaderText = "Team 5";
             this.Column5.Name = "Column5";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(933, 501);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Main menu";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(22, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(263, 128);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Individual";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(222, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(387, 132);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Team";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(534, 29);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 154);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Leaderboard";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,6 +441,7 @@ namespace Unit4
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.AddTeams.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -446,7 +449,6 @@ namespace Unit4
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
