@@ -123,17 +123,5 @@ namespace Unit4
             }
         }
 
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.ClientSize = new System.Drawing.Size(831, 534);
-            this.Name = "Form1";
-            this.Text = "Registration form";
-            this.ResumeLayout(false);
-
-        }
     }
 }
