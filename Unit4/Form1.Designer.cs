@@ -147,13 +147,12 @@ namespace Unit4
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Main menu";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(410, 244);
+            this.button5.Location = new System.Drawing.Point(534, 29);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 132);
+            this.button5.Size = new System.Drawing.Size(269, 154);
             this.button5.TabIndex = 2;
             this.button5.Text = "Leaderboard";
             this.button5.UseVisualStyleBackColor = true;
@@ -161,9 +160,9 @@ namespace Unit4
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(22, 244);
+            this.button4.Location = new System.Drawing.Point(222, 243);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(263, 132);
+            this.button4.Size = new System.Drawing.Size(387, 132);
             this.button4.TabIndex = 1;
             this.button4.Text = "Team";
             this.button4.UseVisualStyleBackColor = true;
@@ -176,7 +175,6 @@ namespace Unit4
             this.button3.TabIndex = 0;
             this.button3.Text = "Individual";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage1
             // 
@@ -338,6 +336,7 @@ namespace Unit4
             this.button2.TabIndex = 9;
             this.button2.Text = "Add Team";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 

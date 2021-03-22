@@ -14,7 +14,11 @@ namespace Unit4;
 	{
 		public Form1()
 		{
-	
+            Teams = new List<Team>();
+            Individuals = new List<Team>();
+            Events = new List<Event>();
+			InitializeComponent();
+
 		}
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -113,17 +117,21 @@ namespace Unit4;
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            AddTeams.SelectedIndex = 3;
         }
 
-        private void tabPage4_Click(object sender, EventArgs e)
+        // Method to add team
+        private void button2_Click(object sender, EventArgs e)
         {
+            string name = textBox2.Text;
+            bool isIndividual = checkBox1.Checked;
+            bool singleEvent = checkBox2.Checked;
 
-        }
+            RegisterTeam(name, isIndividual, singleEvent);
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            textBox2.Text = "";
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
         }
     }
 }
