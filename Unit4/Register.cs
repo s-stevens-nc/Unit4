@@ -91,35 +91,24 @@ namespace Unit4
             return 0;
         }
 
+        public int GetIndexOfTeam (int teamID, List<Team> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].ID == teamID)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         public void RegsiterResult(List<int> winners, int eventID, bool isIndividual)
         {
             for (int i=0; i<winners.Count; i++)
             {
-                // Get index of team or person
-                int index = 0;
-                if (isIndividual)
-                {
-                    for (int j=0; j<Individuals.Count; j++)
-                    {
-                        if (Individuals[i].ID == winners[i])
-                        {
-                            index = j;
-                            break;
-                        }
-                    }
-                    Individuals[index].Points += (winners.Count - i);
-                } else
-                {
-                    for (int j = 0; j < Teams.Count; j++)
-                    {
-                        if (Teams[i].ID == winners[i])
-                        {
-                            index = j;
-                            break;
-                        }
-                    }
-                    Teams[index].Points += (winners.Count - i);
-                }
+                if (isIndividual) Individuals[GetIndexOfTeam(winners[i], Individuals)].Points += (winners.Count - i);
+                else Teams[GetIndexOfTeam(winners[i], Teams)].Points += (winners.Count - i);
             }
         }
 
