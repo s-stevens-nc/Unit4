@@ -114,7 +114,7 @@ namespace Unit4
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            AddTeams.SelectedIndex = 2;
+            AddTeams.SelectedIndex = 3;
         }
     }
 }
