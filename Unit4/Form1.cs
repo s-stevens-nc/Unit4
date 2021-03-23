@@ -123,9 +123,12 @@ namespace Unit4
         // Method to add team
         private void button2_Click(object sender, EventArgs e)
         {
+            System.Windows.Forms.MessageBox.Show("Welcome to the sportsday!");
+            // This message is shown when client click the add team button
             string name = textBox2.Text;
             bool isIndividual = checkBox1.Checked;
             bool singleEvent = checkBox2.Checked;
+        
 
             RegisterTeam(name, isIndividual, singleEvent);
 
@@ -138,5 +141,19 @@ namespace Unit4
         {
 
         }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
     }
 }
