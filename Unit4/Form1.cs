@@ -73,6 +73,8 @@ namespace Unit4
         {
             if (individualbox.Checked)
             {
+               IndividualNameLabel.Visible= true;
+                TeamNamelabel.Visible = false;
                 team_members.Visible = false;
                 TeamBox1.Visible = false;
                 TeamBox2.Visible = false;
@@ -88,6 +90,8 @@ namespace Unit4
             }
             else
             {
+               IndividualNameLabel.Visible = false;
+                TeamNamelabel.Visible = true;
                 team_members.Visible = true;
                 TeamBox1.Visible = true;
                 TeamBox2.Visible = true;
@@ -193,6 +197,16 @@ namespace Unit4
         }
 
         private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
