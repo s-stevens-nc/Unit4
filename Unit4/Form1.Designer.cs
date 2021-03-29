@@ -43,18 +43,20 @@ namespace Unit4
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TeamLabel5 = new System.Windows.Forms.Label();
+            this.TeamBox5 = new System.Windows.Forms.TextBox();
+            this.TeamLabel4 = new System.Windows.Forms.Label();
+            this.TeamLabel3 = new System.Windows.Forms.Label();
+            this.TeamLabel2 = new System.Windows.Forms.Label();
+            this.TeamLabel1 = new System.Windows.Forms.Label();
+            this.team_members = new System.Windows.Forms.Label();
+            this.TeamBox4 = new System.Windows.Forms.TextBox();
+            this.TeamBox3 = new System.Windows.Forms.TextBox();
+            this.TeamBox2 = new System.Windows.Forms.TextBox();
+            this.TeamBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.individualbox = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -191,18 +193,20 @@ namespace Unit4
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.TeamLabel5);
+            this.tabPage2.Controls.Add(this.TeamBox5);
+            this.tabPage2.Controls.Add(this.TeamLabel4);
+            this.tabPage2.Controls.Add(this.TeamLabel3);
+            this.tabPage2.Controls.Add(this.TeamLabel2);
+            this.tabPage2.Controls.Add(this.TeamLabel1);
+            this.tabPage2.Controls.Add(this.team_members);
+            this.tabPage2.Controls.Add(this.TeamBox4);
+            this.tabPage2.Controls.Add(this.TeamBox3);
+            this.tabPage2.Controls.Add(this.TeamBox2);
+            this.tabPage2.Controls.Add(this.TeamBox1);
             this.tabPage2.Controls.Add(this.textBox2);
             this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.individualbox);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label3);
@@ -215,84 +219,101 @@ namespace Unit4
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // label8
+            // TeamLabel5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(259, 349);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "4.";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.TeamLabel5.AutoSize = true;
+            this.TeamLabel5.Location = new System.Drawing.Point(259, 388);
+            this.TeamLabel5.Name = "TeamLabel5";
+            this.TeamLabel5.Size = new System.Drawing.Size(16, 13);
+            this.TeamLabel5.TabIndex = 22;
+            this.TeamLabel5.Text = "5.";
+            this.TeamLabel5.Click += new System.EventHandler(this.label1_Click_2);
             // 
-            // label7
+            // TeamBox5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(259, 311);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "3.";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.TeamBox5.Location = new System.Drawing.Point(281, 381);
+            this.TeamBox5.Name = "TeamBox5";
+            this.TeamBox5.Size = new System.Drawing.Size(275, 20);
+            this.TeamBox5.TabIndex = 21;
             // 
-            // label6
+            // TeamLabel4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(259, 278);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "2.";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.TeamLabel4.AutoSize = true;
+            this.TeamLabel4.Location = new System.Drawing.Point(259, 349);
+            this.TeamLabel4.Name = "TeamLabel4";
+            this.TeamLabel4.Size = new System.Drawing.Size(16, 13);
+            this.TeamLabel4.TabIndex = 20;
+            this.TeamLabel4.Text = "4.";
+            this.TeamLabel4.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label5
+            // TeamLabel3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(259, 239);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "1.";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.TeamLabel3.AutoSize = true;
+            this.TeamLabel3.Location = new System.Drawing.Point(259, 311);
+            this.TeamLabel3.Name = "TeamLabel3";
+            this.TeamLabel3.Size = new System.Drawing.Size(16, 13);
+            this.TeamLabel3.TabIndex = 19;
+            this.TeamLabel3.Text = "3.";
+            this.TeamLabel3.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label4
+            // TeamLabel2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(213, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(434, 31);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Team Members (only enter if team)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.TeamLabel2.AutoSize = true;
+            this.TeamLabel2.Location = new System.Drawing.Point(259, 278);
+            this.TeamLabel2.Name = "TeamLabel2";
+            this.TeamLabel2.Size = new System.Drawing.Size(16, 13);
+            this.TeamLabel2.TabIndex = 18;
+            this.TeamLabel2.Text = "2.";
+            this.TeamLabel2.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox6
+            // TeamLabel1
             // 
-            this.textBox6.Location = new System.Drawing.Point(281, 345);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 20);
-            this.textBox6.TabIndex = 15;
+            this.TeamLabel1.AutoSize = true;
+            this.TeamLabel1.Location = new System.Drawing.Point(259, 239);
+            this.TeamLabel1.Name = "TeamLabel1";
+            this.TeamLabel1.Size = new System.Drawing.Size(16, 13);
+            this.TeamLabel1.TabIndex = 17;
+            this.TeamLabel1.Text = "1.";
+            this.TeamLabel1.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox5
+            // team_members
             // 
-            this.textBox5.Location = new System.Drawing.Point(281, 308);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 20);
-            this.textBox5.TabIndex = 14;
+            this.team_members.AutoSize = true;
+            this.team_members.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.team_members.Location = new System.Drawing.Point(213, 190);
+            this.team_members.Name = "team_members";
+            this.team_members.Size = new System.Drawing.Size(434, 31);
+            this.team_members.TabIndex = 16;
+            this.team_members.Text = "Team Members (only enter if team)";
+            this.team_members.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox4
+            // TeamBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(281, 271);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 20);
-            this.textBox4.TabIndex = 13;
+            this.TeamBox4.Location = new System.Drawing.Point(281, 345);
+            this.TeamBox4.Name = "TeamBox4";
+            this.TeamBox4.Size = new System.Drawing.Size(275, 20);
+            this.TeamBox4.TabIndex = 15;
             // 
-            // textBox3
+            // TeamBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(281, 236);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 20);
-            this.textBox3.TabIndex = 12;
+            this.TeamBox3.Location = new System.Drawing.Point(281, 308);
+            this.TeamBox3.Name = "TeamBox3";
+            this.TeamBox3.Size = new System.Drawing.Size(275, 20);
+            this.TeamBox3.TabIndex = 14;
+            // 
+            // TeamBox2
+            // 
+            this.TeamBox2.Location = new System.Drawing.Point(281, 271);
+            this.TeamBox2.Name = "TeamBox2";
+            this.TeamBox2.Size = new System.Drawing.Size(275, 20);
+            this.TeamBox2.TabIndex = 13;
+            // 
+            // TeamBox1
+            // 
+            this.TeamBox1.Location = new System.Drawing.Point(281, 236);
+            this.TeamBox1.Name = "TeamBox1";
+            this.TeamBox1.Size = new System.Drawing.Size(275, 20);
+            this.TeamBox1.TabIndex = 12;
             // 
             // textBox2
             // 
@@ -312,20 +333,20 @@ namespace Unit4
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox1
+            // individualbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(627, 345);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(186, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Are you entering as an Individual?";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            this.individualbox.AutoSize = true;
+            this.individualbox.Location = new System.Drawing.Point(627, 345);
+            this.individualbox.Name = "individualbox";
+            this.individualbox.Size = new System.Drawing.Size(186, 17);
+            this.individualbox.TabIndex = 10;
+            this.individualbox.Text = "Are you entering as an Individual?";
+            this.individualbox.UseVisualStyleBackColor = true;
+            this.individualbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(341, 400);
+            this.button2.Location = new System.Drawing.Point(340, 430);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 44);
             this.button2.TabIndex = 9;
@@ -517,18 +538,18 @@ namespace Unit4
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label TeamLabel4;
+        private System.Windows.Forms.Label TeamLabel3;
+        private System.Windows.Forms.Label TeamLabel2;
+        private System.Windows.Forms.Label TeamLabel1;
+        private System.Windows.Forms.Label team_members;
+        private System.Windows.Forms.TextBox TeamBox4;
+        private System.Windows.Forms.TextBox TeamBox3;
+        private System.Windows.Forms.TextBox TeamBox2;
+        private System.Windows.Forms.TextBox TeamBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox individualbox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -544,6 +565,8 @@ namespace Unit4
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.TabControl AddTeams;
+        private System.Windows.Forms.Label TeamLabel5;
+        private System.Windows.Forms.TextBox TeamBox5;
     }
 }
 

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Unit4
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
             Teams = new List<Team>();
             Individuals = new List<Team>();
             Events = new List<Event>();
-			InitializeComponent();
+            InitializeComponent();
 
-		}
+        }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -53,6 +53,7 @@ namespace Unit4
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+        
 
         }
 
@@ -67,7 +68,39 @@ namespace Unit4
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+            // Makes the team creation page disappear when the individual box is checked //
+
         {
+            if (individualbox.Checked)
+            {
+                team_members.Visible = false;
+                TeamBox1.Visible = false;
+                TeamBox2.Visible = false;
+                TeamBox3.Visible = false;
+                TeamBox4.Visible = false;
+                TeamBox5.Visible = false;
+                TeamLabel1.Visible = false;
+                TeamLabel2.Visible = false;
+                TeamLabel3.Visible = false;
+                TeamLabel4.Visible = false;
+                TeamLabel5.Visible = false;
+
+            }
+            else
+            {
+                team_members.Visible = true;
+                TeamBox1.Visible = true;
+                TeamBox2.Visible = true;
+                TeamBox3.Visible = true;
+                TeamBox4.Visible = true;
+                TeamBox5.Visible = true;
+                TeamLabel1.Visible = true;
+                TeamLabel2.Visible = true;
+                TeamLabel3.Visible = true;
+                TeamLabel4.Visible = true;
+                TeamLabel5.Visible = true;
+            }
+
 
         }
 
@@ -78,6 +111,7 @@ namespace Unit4
 
         private void label4_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -113,7 +147,7 @@ namespace Unit4
 
         private void label9_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -126,14 +160,15 @@ namespace Unit4
             System.Windows.Forms.MessageBox.Show("Welcome to the sportsday!");
             // This message is shown when client click the add team button
             string name = textBox2.Text;
-            bool isIndividual = checkBox1.Checked;
+            bool isIndividual = individualbox.Checked;
             bool singleEvent = checkBox2.Checked;
-        
+           
+           
 
             RegisterTeam(name, isIndividual, singleEvent);
 
             textBox2.Text = "";
-            checkBox1.Checked = false;
+            individualbox.Checked = false;
             checkBox2.Checked = false;
         }
 
@@ -144,7 +179,7 @@ namespace Unit4
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-             
+   
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -154,6 +189,12 @@ namespace Unit4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
