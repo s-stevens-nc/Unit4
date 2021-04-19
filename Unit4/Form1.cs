@@ -233,10 +233,17 @@ namespace Unit4
         private void button3_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            foreach (Event e_ in Events)
+            dt.Columns.Add("Event", typeof(string));
+            dt.Columns.Add("Type", typeof(string));
+
+            foreach (Event _event in Events)
             {
-                string collumnName = String.Concat(e_.Name, e_.IsIndividual ? " (Solo)" : " (Team)");   // This is using tenery
-                dt.Columns.Add(new DataColumn(collumnName, typeof(string)));
+                if (_event.Done) continue;
+                DataRow dr = dt.NewRow();
+                dr["Type"] = _event.IsIndividual ? "Solo" : "Individual";
+                dr["Event"] = _event.Name;
+                
+                dt.Rows.Add(dr);
             }
             dataGridView2.DataSource = dt;
         }
