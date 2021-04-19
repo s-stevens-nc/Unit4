@@ -19,6 +19,13 @@ namespace Unit4
             Events = new List<Event>();
             InitializeComponent();
 
+            RegisterEvent("100m Race", true);
+            RegisterEvent("200m Race", true);
+            RegisterEvent("1km Race", true);
+            RegisterEvent("Hurdles Race", true);
+            RegisterEvent("Relay Race", false);
+            RegisterEvent("Fooball", false);
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -211,6 +218,7 @@ namespace Unit4
 
         }
 
+        // Refresh Leaderboard
         private void button1_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -219,6 +227,18 @@ namespace Unit4
                 dt .Columns.Add(new DataColumn(t.Name, typeof(string)));
             }
             dataGridView1.DataSource = dt;
+        }
+
+        // Refresh Events
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            foreach (Event e_ in Events)
+            {
+                string collumnName = String.Concat(e_.Name, e_.IsIndividual ? " (Solo)" : " (Team)");   // This is using tenery
+                dt.Columns.Add(new DataColumn(collumnName, typeof(string)));
+            }
+            dataGridView2.DataSource = dt;
         }
     }
 }
