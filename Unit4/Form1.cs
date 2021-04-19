@@ -210,5 +210,15 @@ namespace Unit4
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            foreach (Team t in Teams) {
+                
+                dt .Columns.Add(new DataColumn(t.Name, typeof(string)));
+            }
+            dataGridView1.DataSource = dt;
+        }
     }
 }

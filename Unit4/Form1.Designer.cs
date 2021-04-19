@@ -37,12 +37,8 @@ namespace Unit4
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TeamNamelabel = new System.Windows.Forms.Label();
             this.TeamLabel5 = new System.Windows.Forms.Label();
             this.TeamBox5 = new System.Windows.Forms.TextBox();
             this.TeamLabel4 = new System.Windows.Forms.Label();
@@ -71,7 +67,7 @@ namespace Unit4
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.AddTeams = new System.Windows.Forms.TabControl();
-            this.TeamNamelabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -129,6 +125,7 @@ namespace Unit4
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -153,43 +150,17 @@ namespace Unit4
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(50, 97);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 398);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Team 1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Team 2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Team 3";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Team 4";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Team 5";
-            this.Column5.Name = "Column5";
             // 
             // tabPage2
             // 
@@ -219,6 +190,18 @@ namespace Unit4
             this.tabPage2.Text = "Add Competitors";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // TeamNamelabel
+            // 
+            this.TeamNamelabel.AutoSize = true;
+            this.TeamNamelabel.BackColor = System.Drawing.Color.White;
+            this.TeamNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamNamelabel.Location = new System.Drawing.Point(325, 114);
+            this.TeamNamelabel.Name = "TeamNamelabel";
+            this.TeamNamelabel.Size = new System.Drawing.Size(182, 35);
+            this.TeamNamelabel.TabIndex = 23;
+            this.TeamNamelabel.Text = "Team Name";
+            this.TeamNamelabel.Click += new System.EventHandler(this.label1_Click_3);
             // 
             // TeamLabel5
             // 
@@ -489,17 +472,15 @@ namespace Unit4
             this.AddTeams.TabIndex = 6;
             this.AddTeams.SelectedIndexChanged += new System.EventHandler(this.AddTeams_SelectedIndexChanged);
             // 
-            // TeamNamelabel
+            // button1
             // 
-            this.TeamNamelabel.AutoSize = true;
-            this.TeamNamelabel.BackColor = System.Drawing.Color.White;
-            this.TeamNamelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamNamelabel.Location = new System.Drawing.Point(325, 114);
-            this.TeamNamelabel.Name = "TeamNamelabel";
-            this.TeamNamelabel.Size = new System.Drawing.Size(182, 35);
-            this.TeamNamelabel.TabIndex = 23;
-            this.TeamNamelabel.Text = "Team Name";
-            this.TeamNamelabel.Click += new System.EventHandler(this.label1_Click_3);
+            this.button1.Location = new System.Drawing.Point(50, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -536,11 +517,6 @@ namespace Unit4
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label TeamLabel4;
         private System.Windows.Forms.Label TeamLabel3;
@@ -571,6 +547,7 @@ namespace Unit4
         private System.Windows.Forms.Label TeamLabel5;
         private System.Windows.Forms.TextBox TeamBox5;
         private System.Windows.Forms.Label TeamNamelabel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
