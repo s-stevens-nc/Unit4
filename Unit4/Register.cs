@@ -19,6 +19,12 @@ namespace Unit4
         List<Team> Teams;
         List<Event> Events;
 
+        public class Result
+        {
+            public int EventID;
+            public int Score;
+        }
+
         public class Team
         {
             public string Name;
@@ -26,6 +32,7 @@ namespace Unit4
             public int Points;
             public int ID;
             public bool SingleEvent;
+            public List<Result> Results;
         }
 
         public class Event
