@@ -15,7 +15,6 @@ namespace Unit4
         public Form1()
         {
             Teams = new List<Team>();
-            Individuals = new List<Team>();
             Events = new List<Event>();
             InitializeComponent();
 
@@ -222,9 +221,21 @@ namespace Unit4
         private void button1_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            foreach (Team t in Teams) {
-                
-                dt .Columns.Add(new DataColumn(t.Name, typeof(string)));
+            dt.Columns.Add("Team", typeof(string));
+            dt.Columns.Add("Total Score", typeof(string));
+
+            foreach (Team team in Teams)
+            {
+                int total = 0;
+                foreach (Result result in team.Results)
+                {
+                    total += result.Score;
+                }
+
+                DataRow dr = dt.NewRow();
+                dr["Team"] = team.Name;
+                dr["Total Score"] = total;
+                dt.Rows.Add(dr);
             }
             dataGridView1.DataSource = dt;
         }
@@ -246,6 +257,229 @@ namespace Unit4
                 dt.Rows.Add(dr);
             }
             dataGridView2.DataSource = dt;
+        }
+
+        private void FillComboWithEvents(ComboBox cb)
+        {
+            cb.Items.Clear();
+            foreach (Event eve in Events)
+            {
+                if (!eve.Done)
+                {
+                    cb.Items.Add(eve.Name);
+                }
+            }
+        }
+
+        private void FillComboWithTeams(ComboBox cb)
+        {
+            cb.Items.Clear();
+            foreach (Team team in Teams)
+            {
+                cb.Items.Add(team.Name);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            FillComboWithEvents(comboBox1);
+        }
+
+        private Team GetTeamFromID(int id)
+        {
+            foreach(Team team in Teams)
+            {
+                if (team.ID == id)
+                {
+                    return team;
+                }
+            }
+
+            return null;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Create table
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Team", typeof(string));
+            dt.Columns.Add("Points", typeof(string));
+
+            // Get event
+            Event selectedEvent = new Event();
+            foreach (Event event_ in Events)
+            {
+                if (event_.Name == (string)comboBox1.SelectedItem)
+                {
+                    selectedEvent = event_;
+                    break;
+                }
+            }
+
+            int points = selectedEvent.ParticipantsIDs.Count;
+            foreach (int id in selectedEvent.ParticipantsIDs)
+            {
+                DataRow dr = dt.NewRow();
+                dr["Team"] = GetTeamFromID(id).Name;
+                dr["Points"] = points--; // the "--" means the points varaible is decrementd after we used it
+                dt.Rows.Add(dr);
+            }
+            AddResultTable.DataSource = dt;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            FillComboWithTeams(comboBox2);
+        }
+
+        private bool TeamIsNotAlreadyInEvent(Event event_, int teamId)
+        {
+            foreach (int id in event_.ParticipantsIDs)
+            {
+                if (id == teamId)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox3.Items.Clear();
+            Team selectedTeam = new Team();
+            foreach (Team t in Teams)
+            {
+                if (t.Name == (string)comboBox2.SelectedItem)
+                {
+                    selectedTeam = t;
+                    break; // Break out since weve already found it
+                }
+            }
+
+            foreach (Event event_ in Events)
+            {
+                if (TeamIsNotAlreadyInEvent(event_, selectedTeam.ID))
+                {
+                    if (event_.IsIndividual == selectedTeam.IsIndividual) comboBox3.Items.Add(event_.Name);
+                }
+            }
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            int teamIdx = new int();
+            for (int i=0; i<Teams.Count; i++)
+            {
+                if (Teams[i].Name == (string)comboBox2.SelectedItem)
+                {
+                    teamIdx = i;
+                }
+            }
+
+            foreach (Event event_ in Events)
+            {
+                if (event_.Name == (string)comboBox3.SelectedItem)
+                {
+                    event_.ParticipantsIDs.Add(Teams[teamIdx].ID);
+                    break;
+                }
+            }
+
+            comboBox2.ResetText();
+            comboBox2.SelectedIndex = -1;
+
+            comboBox3.ResetText();
+            comboBox3.SelectedIndex = -1;
+        }
+
+        private void AddResultTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        // It doesnt actually move the row up or down, it just swaps the names
+        private void MoveSelectedIndexUp(int direction)
+        {
+            int index;
+            try
+            {
+                index = AddResultTable.SelectedRows[0].Index;
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+                return;
+            }
+
+            if ((index == 0 && direction == -1) || (index == AddResultTable.Rows.Count-1 && direction == 1)) return;
+
+            string cahceName = (string)AddResultTable.Rows[index + direction].Cells["Team"].Value;
+
+            AddResultTable.Rows[index + direction].Cells["Team"].Value = AddResultTable.Rows[index].Cells["Team"].Value;
+            AddResultTable.Rows[index].Cells["Team"].Value = cahceName;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            MoveSelectedIndexUp(-1);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            MoveSelectedIndexUp(1);
+        }
+
+        
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int eventId = new int();
+            int eventIdx = new int();
+            int i = 0;
+            foreach(Event event_ in Events)
+            {
+                if (event_.Name == (string)comboBox1.SelectedItem)
+                {
+                    if (event_.Done)
+                    {
+                        MessageBox.Show("Event has already been completed!");
+                        return;
+                    }
+                    eventId = event_.ID;
+                    eventIdx = i;
+                    break;
+                }
+                i++;
+            }
+
+            foreach (DataGridViewRow dgvr in AddResultTable.Rows)
+            {
+                int teamIdx = new int();
+                string teamName = (string)dgvr.Cells["Team"].Value;
+
+                for (int ii = 0; ii < Teams.Count; ii++)
+                {
+                    if (Teams[ii].Name == teamName) { teamIdx = ii; break; }
+                }
+
+                Result newResult = new Result();
+                newResult.EventID = eventId;
+                newResult.Score = Convert.ToInt32(dgvr.Cells["Points"].Value);
+                Teams[teamIdx].Results.Add(newResult);
+            }
+
+            Events[eventIdx].Done = true;
+            FillComboWithEvents(comboBox1);
+            comboBox1.ResetText();
+            comboBox1.SelectedIndex = -1;
         }
     }
 }

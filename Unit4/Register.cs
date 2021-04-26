@@ -15,7 +15,6 @@ namespace Unit4
     {
 
         // Even though indivusuals and teams are both team structures, we are keeing them in seperate lists
-        static List<Team> Individuals;
         List<Team> Teams;
         List<Event> Events;
 
@@ -44,6 +43,16 @@ namespace Unit4
             public List<int> ParticipantsIDs;
         }
 
+        public int AmountOfIndividuals()
+        {
+            int count = 0;
+            foreach(Team team in Teams)
+            {
+                if (team.IsIndividual) count++;
+            }
+            return count;
+        }
+
         // Method to create a new team
         public void RegisterTeam (string name, bool isIndividual, bool singleEvent)
         {
@@ -54,15 +63,11 @@ namespace Unit4
 
             _team.Points = 0;
 
-            _team.ID = Teams.Count + Individuals.Count;
+            _team.ID = Teams.Count;
+            _team.Results = new List<Result>();
+            if (isIndividual && AmountOfIndividuals() > 20) return;
 
-            if (isIndividual && Individuals.Count < 20)
-            {
-                Individuals.Add(_team);
-            } else if (!isIndividual)
-            {
-                Teams.Add(_team);
-            }
+            Teams.Add(_team);
         }
 
         // Method to create a new event
@@ -108,15 +113,6 @@ namespace Unit4
                 }
             }
             return -1;
-        }
-
-        public void RegsiterResult(List<int> winners, int eventID, bool isIndividual)
-        {
-            for (int i=0; i<winners.Count; i++)
-            {
-                if (isIndividual) Individuals[GetIndexOfTeam(winners[i], Individuals)].Points += (winners.Count - i);
-                else Teams[GetIndexOfTeam(winners[i], Teams)].Points += (winners.Count - i);
-            }
         }
 
     }
