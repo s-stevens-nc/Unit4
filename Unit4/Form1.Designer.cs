@@ -69,6 +69,7 @@ namespace Unit4
             this.label14 = new System.Windows.Forms.Label();
             this.AddTeams = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@ namespace Unit4
             this.button11 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button13 = new System.Windows.Forms.Button();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -500,10 +500,10 @@ namespace Unit4
             // 
             this.AddTeams.Controls.Add(this.tabPage4);
             this.AddTeams.Controls.Add(this.tabPage2);
+            this.AddTeams.Controls.Add(this.tabPage6);
+            this.AddTeams.Controls.Add(this.tabPage1);
             this.AddTeams.Controls.Add(this.tabPage3);
             this.AddTeams.Controls.Add(this.tabPage5);
-            this.AddTeams.Controls.Add(this.tabPage1);
-            this.AddTeams.Controls.Add(this.tabPage6);
             this.AddTeams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddTeams.Location = new System.Drawing.Point(0, 0);
             this.AddTeams.Name = "AddTeams";
@@ -527,6 +527,16 @@ namespace Unit4
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Add Results";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(27, 398);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 5;
+            this.button13.Text = "Submit";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button10
             // 
@@ -631,16 +641,6 @@ namespace Unit4
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 0;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(27, 398);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 5;
-            this.button13.Text = "Submit";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Form1
             // 
