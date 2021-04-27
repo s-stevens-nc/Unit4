@@ -398,7 +398,7 @@ namespace Unit4
             {
                 if (TeamIsNotAlreadyInEvent(event_, selectedTeam.ID))
                 {
-                    if (event_.IsIndividual == selectedTeam.IsIndividual) comboBox3.Items.Add(event_.Name);
+                    if (event_.IsIndividual == selectedTeam.IsIndividual && !event_.Done) comboBox3.Items.Add(event_.Name);
                 }
             }
         }
