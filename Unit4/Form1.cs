@@ -480,6 +480,12 @@ namespace Unit4
             FillComboWithEvents(comboBox1);
             comboBox1.ResetText();
             comboBox1.SelectedIndex = -1;
+            AddResultTable.DataSource = new DataGridView();
+        }
+
+        private void label1_Click_4(object sender, EventArgs e)
+        {
+
         }
     }
 }
