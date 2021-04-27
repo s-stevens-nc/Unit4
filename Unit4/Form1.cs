@@ -23,7 +23,9 @@ namespace Unit4
             RegisterEvent("1km Race", true);
             RegisterEvent("Hurdles Race", true);
             RegisterEvent("Relay Race", false);
-            RegisterEvent("Fooball", false);
+            RegisterEvent("Football", false);
+            RegisterEvent("Basketball", false);
+            RegisterEvent("VolleyBall", false);
 
         }
 
@@ -219,9 +221,16 @@ namespace Unit4
 
         // Refresh Leaderboard
         private void button1_Click_1(object sender, EventArgs e)
-        {
+        {          
             DataTable dt = new DataTable();
             dt.Columns.Add("Team", typeof(string));
+
+
+            foreach (Event event_ in Events)
+            {
+                if (event_.Done) dt.Columns.Add(event_.Name, typeof(string));
+            }
+
             dt.Columns.Add("Total Score", typeof(string));
 
             foreach (Team team in Teams)
@@ -235,9 +244,35 @@ namespace Unit4
                 DataRow dr = dt.NewRow();
                 dr["Team"] = team.Name;
                 dr["Total Score"] = total;
+
+                foreach (Event event_ in Events)
+                {
+                    if (event_.Done)
+                    {
+                        foreach (int id in event_.ParticipantsIDs)
+                        {
+                            if (id == team.ID)
+                            {
+                                foreach (Result result in team.Results)
+                                {
+                                    if (result.EventID == event_.ID)
+                                    {
+                                        dr[event_.Name] = result.Score;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 dt.Rows.Add(dr);
             }
+            dataGridView1.Columns.Clear();
+            //dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
             dataGridView1.DataSource = dt;
+            
         }
 
         // Refresh Events
