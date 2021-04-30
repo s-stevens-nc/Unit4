@@ -183,7 +183,19 @@ namespace Unit4
             bool isIndividual = individualbox.Checked;
             bool singleEvent = checkBox2.Checked;
            
-           
+           if (isIndividual)
+            {
+                int count = 0;
+                foreach (Team team in Teams)
+                {
+                    if (team.IsIndividual) count++;
+                }
+                if (count >= 20)
+                {
+                    DialogResult dr = MessageBox.Show(String.Format("There are already 20 individuals registered\nCannot add {0}", name), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
 
             RegisterTeam(name, isIndividual, singleEvent);
 
