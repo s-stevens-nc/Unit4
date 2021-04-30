@@ -32,6 +32,7 @@ namespace Unit4
             public int ID;
             public bool SingleEvent;
             public List<Result> Results;
+            public int EnteredEvents;
         }
 
         public class Event

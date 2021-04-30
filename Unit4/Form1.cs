@@ -18,14 +18,22 @@ namespace Unit4
             Events = new List<Event>();
             InitializeComponent();
 
+            // Register Event (<string EventName> <boolean IsIndividual>)
             RegisterEvent("100m Race", true);
             RegisterEvent("200m Race", true);
+            RegisterEvent("500m Race", true);
             RegisterEvent("1km Race", true);
             RegisterEvent("Hurdles Race", true);
+            RegisterEvent("Long Jump", true);
+            RegisterEvent("Egg and Spoon Race", true);
             RegisterEvent("Relay Race", false);
             RegisterEvent("Football", false);
             RegisterEvent("Basketball", false);
             RegisterEvent("VolleyBall", false);
+            RegisterEvent("Hockey", false);
+            RegisterEvent("Rugby", false);
+            RegisterEvent("Handball", false);
+            RegisterEvent("Dodgeball", false);
 
         }
 
@@ -419,11 +427,26 @@ namespace Unit4
                 }
             }
 
+            DialogResult dr = MessageBox.Show(String.Format("Are you sue you want to enter {0} into the {1} event", Teams[teamIdx].Name, (string)comboBox3.SelectedItem), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No) return;
+
+            if (Teams[teamIdx].SingleEvent && Teams[teamIdx].EnteredEvents == 1)
+            {
+                System.Windows.Forms.MessageBox.Show(String.Format("{0} are only permitted to enter 1 event", Teams[teamIdx].Name));
+                return;
+            }
+            else if (Teams[teamIdx].EnteredEvents == 5)
+            {
+                System.Windows.Forms.MessageBox.Show(String.Format("{0} are have already entered 5 events", Teams[teamIdx].Name));
+                return;
+            }
+
             foreach (Event event_ in Events)
             {
                 if (event_.Name == (string)comboBox3.SelectedItem)
                 {
                     event_.ParticipantsIDs.Add(Teams[teamIdx].ID);
+                    Teams[teamIdx].EnteredEvents++;
                     break;
                 }
             }
@@ -519,6 +542,11 @@ namespace Unit4
         }
 
         private void label1_Click_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e)
         {
 
         }
