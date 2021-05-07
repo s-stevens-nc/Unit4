@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Unit4.Form1">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <NestedTypes>
+      <Class Name="Unit4.Form1.Result" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Regs\Register.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Unit4.Form1.Team" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Regs\Register.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Unit4.Form1.Event" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Regs\Register.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>syKACAQAXCAwQJERlNCBcogSQvw/MCkiwHSeVxEB0EI=</HashCode>
+      <FileName>Forms\Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
