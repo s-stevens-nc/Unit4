@@ -562,12 +562,5 @@ namespace Unit4
         {
 
         }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        
     }
 }

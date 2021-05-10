@@ -83,7 +83,6 @@ namespace Unit4
             this.button4 = new System.Windows.Forms.Button();
             this.AddResultTable = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button14 = new System.Windows.Forms.Button();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -418,7 +417,6 @@ namespace Unit4
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Main Menu";
             this.tabPage4.UseVisualStyleBackColor = true;
-            
             // 
             // label10
             // 
@@ -592,7 +590,6 @@ namespace Unit4
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button14);
             this.tabPage1.Controls.Add(this.button13);
             this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.button9);
@@ -611,7 +608,7 @@ namespace Unit4
             // button13
             // 
             this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button13.Location = new System.Drawing.Point(848, 384);
+            this.button13.Location = new System.Drawing.Point(847, 474);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 23);
             this.button13.TabIndex = 5;
@@ -679,16 +676,6 @@ namespace Unit4
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(856, 440);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(56, 56);
-            this.button14.TabIndex = 6;
-            this.button14.Text = "Return to Main Menu";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Form1
             // 
@@ -775,7 +762,6 @@ namespace Unit4
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button14;
     }
 }
 
