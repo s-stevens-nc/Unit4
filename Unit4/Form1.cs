@@ -69,7 +69,7 @@ namespace Unit4
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-        
+
 
         }
 
@@ -84,12 +84,12 @@ namespace Unit4
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-            // Makes the team creation page disappear when the individual box is checked //
+        // Makes the team creation page disappear when the individual box is checked //
 
         {
             if (individualbox.Checked)
             {
-               IndividualNameLabel.Visible= true;
+                IndividualNameLabel.Visible = true;
                 TeamNamelabel.Visible = false;
                 team_members.Visible = false;
                 TeamBox1.Visible = false;
@@ -106,7 +106,7 @@ namespace Unit4
             }
             else
             {
-               IndividualNameLabel.Visible = false;
+                IndividualNameLabel.Visible = false;
                 TeamNamelabel.Visible = true;
                 team_members.Visible = true;
                 TeamBox1.Visible = true;
@@ -182,8 +182,8 @@ namespace Unit4
             string name = textBox2.Text;
             bool isIndividual = individualbox.Checked;
             bool singleEvent = checkBox2.Checked;
-           
-           if (isIndividual)
+
+            if (isIndividual)
             {
                 int count = 0;
                 foreach (Team team in Teams)
@@ -211,7 +211,7 @@ namespace Unit4
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-   
+
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -241,7 +241,7 @@ namespace Unit4
 
         // Refresh Leaderboard
         private void button1_Click_1(object sender, EventArgs e)
-        {          
+        {
             DataTable dt = new DataTable();
             dt.Columns.Add("Team", typeof(string));
 
@@ -292,7 +292,7 @@ namespace Unit4
             //dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
             dataGridView1.DataSource = dt;
-            
+
         }
 
         // Refresh Events
@@ -308,7 +308,7 @@ namespace Unit4
                 DataRow dr = dt.NewRow();
                 dr["Type"] = _event.IsIndividual ? "Solo" : "Individual";
                 dr["Event"] = _event.Name;
-                
+
                 dt.Rows.Add(dr);
             }
             dataGridView2.DataSource = dt;
@@ -342,7 +342,7 @@ namespace Unit4
 
         private Team GetTeamFromID(int id)
         {
-            foreach(Team team in Teams)
+            foreach (Team team in Teams)
             {
                 if (team.ID == id)
                 {
@@ -425,13 +425,13 @@ namespace Unit4
 
         private void tabPage6_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             int teamIdx = new int();
-            for (int i=0; i<Teams.Count; i++)
+            for (int i = 0; i < Teams.Count; i++)
             {
                 if (Teams[i].Name == (string)comboBox2.SelectedItem)
                 {
@@ -489,7 +489,7 @@ namespace Unit4
                 return;
             }
 
-            if ((index == 0 && direction == -1) || (index == AddResultTable.Rows.Count-1 && direction == 1)) return;
+            if ((index == 0 && direction == -1) || (index == AddResultTable.Rows.Count - 1 && direction == 1)) return;
 
             string cahceName = (string)AddResultTable.Rows[index + direction].Cells["Team"].Value;
 
@@ -508,13 +508,13 @@ namespace Unit4
             MoveSelectedIndexUp(1);
         }
 
-        
+
         private void button13_Click(object sender, EventArgs e)
         {
             int eventId = new int();
             int eventIdx = new int();
             int i = 0;
-            foreach(Event event_ in Events)
+            foreach (Event event_ in Events)
             {
                 if (event_.Name == (string)comboBox1.SelectedItem)
                 {
@@ -562,5 +562,94 @@ namespace Unit4
         {
 
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome to the sports day software, this is your main menu." + "\n" +
+                "Click on any button to take you to the page indicated");
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is the page for adding contestants." + "\n" + "" +
+                "If you want to join as a solo compettitor please tick the Are you entering as an idividual checkbox" + "\n" +
+                " If you only wish to enter for one event, please tick the Are you participating in only one event checkbox");
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("thanks for adding another event!");
+
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Now you have added a team (or an individual) its time to choose an event \n " +
+                "click refresh teams and then choose your name from the drop down \n " +
+                "Then press the select event dropdown and select what you want to join \n " +
+                "Finally press Join Event");
+        }
+
+        private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Here you can add events to the sportsday.");
+        }
     }
 }
+    
