@@ -151,7 +151,6 @@ namespace Unit4
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Solo";
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -162,7 +161,6 @@ namespace Unit4
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Group";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_2);
             // 
             // label4
             // 
@@ -172,7 +170,6 @@ namespace Unit4
             this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Event name";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // textBox1
             // 
@@ -180,7 +177,6 @@ namespace Unit4
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(126, 22);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // tabPage5
             // 
@@ -272,7 +268,6 @@ namespace Unit4
             this.label9.Size = new System.Drawing.Size(245, 46);
             this.label9.TabIndex = 1;
             this.label9.Text = "Leaderboard";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // dataGridView1
             // 
@@ -287,7 +282,6 @@ namespace Unit4
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1160, 490);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // tabPage1
             // 
@@ -305,7 +299,6 @@ namespace Unit4
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Add Results";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
             // button13
             // 
@@ -402,7 +395,6 @@ namespace Unit4
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "Join Event";
             this.tabPage6.UseVisualStyleBackColor = true;
-            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
             // label2
             // 
@@ -423,7 +415,6 @@ namespace Unit4
             this.label1.Size = new System.Drawing.Size(151, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Select team or indivudal";
-            this.label1.Click += new System.EventHandler(this.label1_Click_4);
             // 
             // button12
             // 
@@ -496,7 +487,6 @@ namespace Unit4
             this.tabPage2.Text = "Add Competitors";
             this.tabPage2.ToolTipText = "Click me to add competitors";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // button16
             // 
@@ -519,7 +509,6 @@ namespace Unit4
             this.TeamNamelabel.Size = new System.Drawing.Size(182, 35);
             this.TeamNamelabel.TabIndex = 23;
             this.TeamNamelabel.Text = "Team Name";
-            this.TeamNamelabel.Click += new System.EventHandler(this.label1_Click_3);
             // 
             // TeamLabel5
             // 
@@ -530,7 +519,6 @@ namespace Unit4
             this.TeamLabel5.Size = new System.Drawing.Size(18, 16);
             this.TeamLabel5.TabIndex = 22;
             this.TeamLabel5.Text = "5.";
-            this.TeamLabel5.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // TeamBox5
             // 
@@ -591,7 +579,6 @@ namespace Unit4
             this.TeamLabel4.Size = new System.Drawing.Size(18, 16);
             this.TeamLabel4.TabIndex = 20;
             this.TeamLabel4.Text = "4.";
-            this.TeamLabel4.Click += new System.EventHandler(this.label8_Click);
             // 
             // TeamLabel3
             // 
@@ -602,7 +589,6 @@ namespace Unit4
             this.TeamLabel3.Size = new System.Drawing.Size(18, 16);
             this.TeamLabel3.TabIndex = 19;
             this.TeamLabel3.Text = "3.";
-            this.TeamLabel3.Click += new System.EventHandler(this.label7_Click);
             // 
             // TeamLabel2
             // 
@@ -613,7 +599,6 @@ namespace Unit4
             this.TeamLabel2.Size = new System.Drawing.Size(18, 16);
             this.TeamLabel2.TabIndex = 18;
             this.TeamLabel2.Text = "2.";
-            this.TeamLabel2.Click += new System.EventHandler(this.label6_Click);
             // 
             // TeamLabel1
             // 
@@ -624,7 +609,6 @@ namespace Unit4
             this.TeamLabel1.Size = new System.Drawing.Size(18, 16);
             this.TeamLabel1.TabIndex = 17;
             this.TeamLabel1.Text = "1.";
-            this.TeamLabel1.Click += new System.EventHandler(this.label5_Click);
             // 
             // team_members
             // 
@@ -636,7 +620,6 @@ namespace Unit4
             this.team_members.Size = new System.Drawing.Size(202, 31);
             this.team_members.TabIndex = 16;
             this.team_members.Text = "Team Members";
-            this.team_members.Click += new System.EventHandler(this.label4_Click);
             // 
             // checkBox2
             // 
@@ -648,7 +631,6 @@ namespace Unit4
             this.checkBox2.TabIndex = 11;
             this.checkBox2.Text = "Are you particpating in one event?";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // individualbox
             // 
@@ -683,7 +665,6 @@ namespace Unit4
             this.IndividualNameLabel.Size = new System.Drawing.Size(192, 29);
             this.IndividualNameLabel.TabIndex = 7;
             this.IndividualNameLabel.Text = " Individual Name";
-            this.IndividualNameLabel.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -695,7 +676,6 @@ namespace Unit4
             this.label3.Size = new System.Drawing.Size(318, 46);
             this.label3.TabIndex = 6;
             this.label3.Text = "Add Competitors";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AddTeams
             // 
@@ -714,7 +694,6 @@ namespace Unit4
             this.AddTeams.SelectedIndex = 0;
             this.AddTeams.Size = new System.Drawing.Size(1248, 654);
             this.AddTeams.TabIndex = 6;
-            this.AddTeams.SelectedIndexChanged += new System.EventHandler(this.AddTeams_SelectedIndexChanged);
             // 
             // MainMenu
             // 
@@ -735,7 +714,6 @@ namespace Unit4
             this.MainMenu.TabIndex = 3;
             this.MainMenu.Text = "Main Menu";
             this.MainMenu.UseVisualStyleBackColor = true;
-            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // button15
             // 
@@ -779,7 +757,6 @@ namespace Unit4
             this.button8.TabIndex = 23;
             this.button8.Text = "View the Individuals";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -790,7 +767,6 @@ namespace Unit4
             this.button7.TabIndex = 22;
             this.button7.Text = "View the Teams";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -801,7 +777,6 @@ namespace Unit4
             this.button6.TabIndex = 21;
             this.button6.Text = "View the Events";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -812,7 +787,6 @@ namespace Unit4
             this.button5.TabIndex = 20;
             this.button5.Text = "View The Leaderboard";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // AddCompetitorsButton
             // 
@@ -823,7 +797,6 @@ namespace Unit4
             this.AddCompetitorsButton.TabIndex = 18;
             this.AddCompetitorsButton.Text = "Add competitors";
             this.AddCompetitorsButton.UseVisualStyleBackColor = true;
-            this.AddCompetitorsButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label15
             // 
@@ -879,7 +852,6 @@ namespace Unit4
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "-";
             this.Text = "Sports Day";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);

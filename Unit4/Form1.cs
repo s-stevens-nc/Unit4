@@ -37,138 +37,25 @@ namespace Unit4
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Welcome to the sportsday!");
-        }// this is going to display Welcome to sportday after save button clicked//
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // the name gets put in here//
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddTeams_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         // Makes the team creation page disappear when the individual box is checked //
 
         {
-            if (individualbox.Checked)
-            {
-                IndividualNameLabel.Visible = true;
-                TeamNamelabel.Visible = false;
-                team_members.Visible = false;
-                TeamBox1.Visible = false;
-                TeamBox2.Visible = false;
-                TeamBox3.Visible = false;
-                TeamBox4.Visible = false;
-                TeamBox5.Visible = false;
-                TeamLabel1.Visible = false;
-                TeamLabel2.Visible = false;
-                TeamLabel3.Visible = false;
-                TeamLabel4.Visible = false;
-                TeamLabel5.Visible = false;
-
-            }
-            else
-            {
-                IndividualNameLabel.Visible = false;
-                TeamNamelabel.Visible = true;
-                team_members.Visible = true;
-                TeamBox1.Visible = true;
-                TeamBox2.Visible = true;
-                TeamBox3.Visible = true;
-                TeamBox4.Visible = true;
-                TeamBox5.Visible = true;
-                TeamLabel1.Visible = true;
-                TeamLabel2.Visible = true;
-                TeamLabel3.Visible = true;
-                TeamLabel4.Visible = true;
-                TeamLabel5.Visible = true;
-            }
-
-
+            Control[] controls = new Control[] { IndividualNameLabel, TeamNamelabel, team_members, TeamBox1, TeamBox2, TeamBox3, TeamBox4, TeamBox5, TeamLabel1, TeamLabel2, TeamLabel3, TeamLabel4, TeamLabel5};
+            for (int i = 0; i < controls.Length; i++) controls[i].Visible = individualbox.Checked;
+            label3.Text = !individualbox.Checked ? "Individual name" : "Team name";
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
         private void button5_Click(object sender, EventArgs e)
         {
             AddTeams.SelectedIndex = 3;
@@ -202,41 +89,6 @@ namespace Unit4
             textBox2.Text = "";
             individualbox.Checked = false;
             checkBox2.Checked = false;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         // Refresh Leaderboard
@@ -423,11 +275,6 @@ namespace Unit4
             }
         }
 
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button11_Click(object sender, EventArgs e)
         {
             int teamIdx = new int();
@@ -468,11 +315,6 @@ namespace Unit4
 
             comboBox3.ResetText();
             comboBox3.SelectedIndex = -1;
-        }
-
-        private void AddResultTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
 
@@ -553,26 +395,6 @@ namespace Unit4
             AddResultTable.DataSource = new DataGridView();
         }
 
-        private void label1_Click_4(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void button15_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to the sports day software, this is your main menu." + "\n" +
@@ -598,52 +420,12 @@ namespace Unit4
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button17_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Now you have added a team (or an individual) its time to choose an event \n " +
                 "click refresh teams and then choose your name from the drop down \n " +
                 "Then press the select event dropdown and select what you want to join \n " +
                 "Finally press Join Event");
-        }
-
-        private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
         }
 
         private void button18_Click(object sender, EventArgs e)
