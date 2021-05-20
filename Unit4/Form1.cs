@@ -46,10 +46,8 @@ namespace Unit4
         {
         }
 
-
+        // Method to change options depending on if a team is indivudual or team
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        // Makes the team creation page disappear when the individual box is checked //
-
         {
             Control[] controls = new Control[] { IndividualNameLabel, TeamNamelabel, team_members, TeamBox1, TeamBox2, TeamBox3, TeamBox4, TeamBox5, TeamLabel1, TeamLabel2, TeamLabel3, TeamLabel4, TeamLabel5};
             for (int i = 0; i < controls.Length; i++) controls[i].Visible = individualbox.Checked;
@@ -91,7 +89,7 @@ namespace Unit4
             checkBox2.Checked = false;
         }
 
-        // Refresh Leaderboard
+        // Method to refresh leaderboard
         private void button1_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -113,6 +111,7 @@ namespace Unit4
                     total += result.Score;
                 }
 
+                // Create a new row
                 DataRow dr = dt.NewRow();
                 dr["Team"] = team.Name;
                 dr["Total Score"] = total;
@@ -140,8 +139,9 @@ namespace Unit4
 
                 dt.Rows.Add(dr);
             }
+
+            // Refresh leaderboard
             dataGridView1.Columns.Clear();
-            //dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
             dataGridView1.DataSource = dt;
 
@@ -166,6 +166,7 @@ namespace Unit4
             dataGridView2.DataSource = dt;
         }
 
+        // Method to fill a combobox with every incomplete event
         private void FillComboWithEvents(ComboBox cb)
         {
             cb.Items.Clear();
@@ -178,6 +179,7 @@ namespace Unit4
             }
         }
 
+        // Method to fill Combobox with teams
         private void FillComboWithTeams(ComboBox cb)
         {
             cb.Items.Clear();
@@ -192,6 +194,7 @@ namespace Unit4
             FillComboWithEvents(comboBox1);
         }
 
+        // Method to get team from ID, return Null if none
         private Team GetTeamFromID(int id)
         {
             foreach (Team team in Teams)
@@ -205,6 +208,7 @@ namespace Unit4
             return null;
         }
 
+        // Method to change teams in results table based on selected event
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Create table
@@ -253,6 +257,7 @@ namespace Unit4
             return true;
         }
 
+        // Method to change the events in combobox when selected team has changed
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox3.Items.Clear();
@@ -275,6 +280,7 @@ namespace Unit4
             }
         }
 
+        // Method to join selected team to selected event
         private void button11_Click(object sender, EventArgs e)
         {
             int teamIdx = new int();
@@ -318,7 +324,7 @@ namespace Unit4
         }
 
 
-        // It doesnt actually move the row up or down, it just swaps the names
+        // Method to move selected team up and down in the result table
         private void MoveSelectedIndexUp(int direction)
         {
             int index;
@@ -341,7 +347,6 @@ namespace Unit4
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             MoveSelectedIndexUp(-1);
         }
 
@@ -350,7 +355,7 @@ namespace Unit4
             MoveSelectedIndexUp(1);
         }
 
-
+        // Method to submit results
         private void button13_Click(object sender, EventArgs e)
         {
             int eventId = new int();
