@@ -50,8 +50,8 @@ namespace Unit4
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             Control[] controls = new Control[] { IndividualNameLabel, TeamNamelabel, team_members, TeamBox1, TeamBox2, TeamBox3, TeamBox4, TeamBox5, TeamLabel1, TeamLabel2, TeamLabel3, TeamLabel4, TeamLabel5};
-            for (int i = 0; i < controls.Length; i++) controls[i].Visible = individualbox.Checked;
-            label3.Text = !individualbox.Checked ? "Individual name" : "Team name";
+            for (int i = 0; i < controls.Length; i++) controls[i].Visible = !individualbox.Checked;
+            label3.Text = individualbox.Checked ? "Individual name" : "Team name";
         }
 
         private void button5_Click(object sender, EventArgs e)
