@@ -302,7 +302,7 @@ namespace Unit4
             }
             else if (Teams[teamIdx].EnteredEvents == 5)
             {
-                System.Windows.Forms.MessageBox.Show(String.Format("{0} are have already entered 5 events", Teams[teamIdx].Name));
+                System.Windows.Forms.MessageBox.Show(String.Format("{0} have already entered 5 events", Teams[teamIdx].Name));
                 return;
             }
 
