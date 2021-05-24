@@ -283,7 +283,7 @@ namespace Unit4
         // Method to join selected team to selected event
         private void button11_Click(object sender, EventArgs e)
         {
-            int teamIdx = new int();
+            int teamIdx = -1;
             for (int i = 0; i < Teams.Count; i++)
             {
                 if (Teams[i].Name == (string)comboBox2.SelectedItem)
@@ -292,6 +292,12 @@ namespace Unit4
                 }
             }
 
+            // If team not found
+            if (teamIdx == -1)
+            {
+                MessageBox.Show(String.Format("Could not found a team named \"{0}\"", (string)comboBox2.Text), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DialogResult dr = MessageBox.Show(String.Format("Are you sue you want to enter {0} into the {1} event", Teams[teamIdx].Name, (string)comboBox3.SelectedItem), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No) return;
 
