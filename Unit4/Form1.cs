@@ -451,6 +451,22 @@ namespace Unit4
         {
             MessageBox.Show("Here you can add events to the sportsday.");
         }
+
+		private void AddCompetitorsButton_Click(object sender, EventArgs e)
+		{
+            AddTeams.SelectedIndex = 1;
+		}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+            AddTeams.SelectedIndex = 4;
+        }
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+            AddTeams.SelectedIndex = 5;
+
+        }
     }
 }
     
